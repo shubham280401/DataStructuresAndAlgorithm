@@ -43,3 +43,4 @@ var sortedSquares = function (nums) {
   }
   return result;
 };
+console.log(sortedSquares([-4, -1, 0, 3, 10]));
