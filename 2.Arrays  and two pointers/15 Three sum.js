@@ -7,7 +7,7 @@ var threeSum = function (nums) {
   //     return false;
   //   }
 
-  while (c < n) {
+  while (c < n - 2) {
     let i = c + 1;
     let j = n - 1;
     let target = nums[c] * -1;
@@ -22,7 +22,7 @@ var threeSum = function (nums) {
       } else i++;
     }
     c++;
-    while (c < n && nums[c] === nums[c - 1]) c++;
+    while (c < n - 2 && nums[c] === nums[c - 1]) c++;
   }
   return triplet;
 };
