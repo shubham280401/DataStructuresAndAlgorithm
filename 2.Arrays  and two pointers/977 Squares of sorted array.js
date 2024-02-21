@@ -44,3 +44,24 @@ var sortedSquares = function (nums) {
   return result;
 };
 console.log(sortedSquares([-4, -1, 0, 3, 10]));
+
+/**
+ * var sortedSquares = function(nums) {
+    let n =nums.length;
+    let result = Array(n);
+    let left=0;
+    let right = n-1;
+    let i =n-1;
+    while(i>=0){
+        if(nums[left]**2>nums[right]**2){
+            result[i]=nums[left]**2;
+            left++;
+        }else{
+            result[i]=nums[right]**2;
+            right--;
+        }
+        i--;
+    }
+    return result;
+};
+ */
