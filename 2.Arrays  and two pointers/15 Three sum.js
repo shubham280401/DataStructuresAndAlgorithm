@@ -16,7 +16,7 @@ var threeSum = function (nums) {
         triplet.push([nums[c], nums[i], nums[j]]);
         i++; //can do anything i++ or j--
         while (i < j && nums[i] === nums[i - 1]) i++;
-        while (i < j && nums[j] == nums[j - 1]) j--;
+        while (i < j && nums[j] == nums[j + 1]) j--;
       } else if (nums[i] + nums[j] > target) {
         j--;
       } else i++;
