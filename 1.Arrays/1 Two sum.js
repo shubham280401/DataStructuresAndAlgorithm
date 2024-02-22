@@ -16,3 +16,17 @@ var twoSum = function (nums, target) {
   }
 };
 console.log(twoSum([2, 3, 4, 5], 9));
+
+var twoSumUsingHash = function (nums, target) {
+  let mp = {};
+  let n = nums.length;
+  for (let i = 0; i < n; i++) {
+    let a = target - nums[i];
+    if (a in mp) {
+      return [i, mp[a]];
+    } else {
+      mp[nums[i]] = i;
+    }
+  }
+};
+console.log(twoSumUsingHash([2, 3, 4, 5], 9));
