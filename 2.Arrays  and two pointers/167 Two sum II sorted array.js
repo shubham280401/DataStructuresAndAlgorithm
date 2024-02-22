@@ -55,3 +55,18 @@ var twoSumTwo = function (nums, target) {
   }
 };
 console.log(twoSumTwo([1, 3, 4, 7, 11, 16, 22], 15));
+
+//2 sum 2 using hashmap
+var twoSum = function (nums, target) {
+  let mp = {};
+
+  for (let i = 0; i < nums.length; i++) {
+    let a = target - nums[i];
+    if (a in mp) {
+      return [i + 1, mp[a] + 1];
+    } else {
+      mp[nums[i]] = i;
+    }
+  }
+};
+console.log(twoSum([1, 3, 4, 7, 11, 16, 22], 15));
