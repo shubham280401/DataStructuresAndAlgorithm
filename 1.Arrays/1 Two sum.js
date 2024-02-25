@@ -21,9 +21,9 @@ var twoSumUsingHash = function (nums, target) {
   let mp = {};
   let n = nums.length;
   for (let i = 0; i < n; i++) {
-    let a = target - nums[i];
-    if (a in mp) {
-      return [i, mp[a]];
+    let compliment = target - nums[i]; //compliment is being checked in mp
+    if (compliment in mp) {
+      return [i, mp[compliment]]; //it will return the value of the given key
     } else {
       mp[nums[i]] = i;
     }
