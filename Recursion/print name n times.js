@@ -1,4 +1,4 @@
-//Print something n times using recursion
+//Print 1 to n using recursion and backtracking
 function recursion(i, n) {
   if (i > n) {
     return "Iteration done";
