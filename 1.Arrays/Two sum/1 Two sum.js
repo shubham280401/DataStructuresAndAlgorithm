@@ -30,3 +30,7 @@ var twoSumUsingHash = function (nums, target) {
   }
 };
 console.log(twoSumUsingHash([2, 3, 4, 5], 9));
+
+
+
+
