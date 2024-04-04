@@ -38,18 +38,18 @@ There is at least one word in s.
  */
 
 var reverseWords = function (s) {
-  let arr = s.split(" ").filter((e) => e !== "");
-  let i = 0;
-  let j = arr.length - 1;
-  while (i <= j) {
-    let temp = arr[j];
-    arr[j] = arr[i];
-    arr[i] = temp;
-    i++;
-    j--;
+  let arr = s.split(" ").filter((e) => e !== ""); //It forms array and filter removes empty strings if present
+  let n = arr.length;
+  let left = 0,
+    right = n - 1;
+  while (left < right) {
+    let storeLeft = arr[left]; //Stores the left value
+    arr[left] = arr[right]; //assigns the value to right
+    arr[right] = storeLeft; //left and right both left with the value of right thus assign storedLeft value to right
+    left++; //move the pointers further
+    right--;
   }
-  let newArr = arr.join(" ");
-  return newArr;
+  return arr.join(" "); //return the reversed words
 };
 
 var reverseWords = function (s) {
