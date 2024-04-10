@@ -8,7 +8,7 @@ function upperBound(arr, x) {
     if (arr[mid] <= x) {
       lo = mid + 1; // discard the left half
     } else {
-      ans = mid; // we got a candidate ans which is >= x and we can find btr on left side
+      ans = mid; // we got a candidate ans which is > x and we can find btr on left side
       hi = mid - 1;
     }
   }
